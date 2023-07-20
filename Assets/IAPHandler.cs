@@ -13,9 +13,9 @@ public class IAPHandler : MonoBehaviour
     public void GetIAPToken()
     {
         AndroidJavaClass unityPlayerClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
-        AndroidJavaObject currentActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
+       // AndroidJavaObject currentActivity = unityPlayerClass.GetStatic<AndroidJavaObject>("currentActivity");
 
         AndroidJavaClass iapBridgeClass = new AndroidJavaClass("com.VDOGAMES.IAPTest.IAPBridge");
-        currentActivity.Call("startActivity", iapBridgeClass);
+       // currentActivity.Call("startActivity", iapBridgeClass);
     }
 }
